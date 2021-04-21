@@ -21,9 +21,9 @@ auto;max-width:750px;line-height:1.6;font-size:18px;color:#444;padding:0
 <li><strong>Otherwise</strong> you’re in the right place! This tutorial will focus on the fundamentals of gamedev with as little config and annoyance as possible. It will assume you’re familiar with the very basics of java objects and classes but not much more.</li>
 </ul>
 <p>First, you’ll need to get a libgdx project set up. This honestly a bit of a pain and many will fall at this first hurdle. I can’t really explain it better than <a href="https://github.com/libgdx/libgdx/wiki/Project-Setup-Gradle">https://github.com/libgdx/libgdx/wiki/Project-Setup-Gradle</a>. I recommend unticking most of the boxes in the setup app so it looks like similar to this though (your paths and names will be different and that’s fine):</p>
-<p><img src="http://tann.space/HelloLibgdx/setup.png" alt=""></p>
+<p><img src="setup.png" alt=""></p>
 <p>Now, if you have got everything working, you should have this monstrousity on your screen:<br>
-<img src="http://tann.space/HelloLibgdx/awful.png" alt=""></p>
+<img src="awful.png" alt=""></p>
 <p>Wow, it’s weird that they haven’t made this nicer looking isn’t it? I wouldn’t think about it too much if I were you…</p>
 <p>Anyway, open up MyGdxGame.java (or whatever you called the class in core/src/something/something/) and delete it all (except the package declaration at the top) and replace it with this:</p>
 <pre><code class="language-Java"><span class="hljs-keyword">import</span> com.badlogic.gdx.ApplicationAdapter;
@@ -47,7 +47,7 @@ auto;max-width:750px;line-height:1.6;font-size:18px;color:#444;padding:0
     }
 }
 </code></pre>
-<p><img src="http://tann.space/HelloLibgdx/circle.png" alt=""><br>
+<p><img src="circle.png" alt=""><br>
 Ok! Let’s run through this.</p>
 <ul>
 <li>create() runs once when your game starts.</li>
@@ -76,7 +76,7 @@ Add some variables to the top of the class:</p>
 <pre><code class="language-Java">Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT); 
 </code></pre>
 <p>This just clears the screen.</p>
-<p><img src="http://tann.space/HelloLibgdx/moving.gif" alt="alt text"></p>
+<p><img src="moving.gif" alt="alt text"></p>
 <p>Now we have a circle which moves properly. Except it disappears off the edge. A simple way to fix this is to keep track of its position and start subtracting from x once it gets too far.</p>
 <p>We need another variable for this.</p>
 <pre><code class="language-Java"><span class="hljs-keyword">int</span> xSpeed = <span class="hljs-number">5</span>;
@@ -180,9 +180,9 @@ Delete the reference to a single ball in Main.java and replace it a list, and ad
 }
 shape.end();
 </code></pre>
-<p><img src="http://tann.space/HelloLibgdx/bouncing.gif" alt=""></p>
+<p><img src="bouncing.gif" alt=""></p>
 <p>Excellent! Now we’re getting somewhere. We have some clean code and a cool effect with very little effort. Just drawing circles and a tiny bit of maths.</p>
 <p>What can we turn this into? How about the classic Breakout! We already have bouncing balls and balls bouncing off walls so we’re half way there! Unfortunately it’s probably the easy half but coding problems are the fun!</p>
-<p><a href="http://tann.space/HelloLibgdx/2.html">Click here for part 2</a></p>
+<p><a href="2.html">Click here for part 2</a></p>
 
 </body></html>
