@@ -10,7 +10,7 @@ auto;max-width:750px;line-height:1.6;font-size:18px;color:#444;padding:0
 10px}h1,h2,h3{line-height:1.2}
 </style></head><body id="preview">
 <h1><a id="Part_three_Breakout_0"></a>Part three: Breakout!</h1>
-<p><a href="http://tann.space/HelloLibgdx">Part 1</a> | <a href="http://tann.space/HelloLibgdx/2.html">Part 2</a> | Part 3</p>
+<p><a href="index.html">Part 1</a> | <a href="2.html">Part 2</a> | Part 3</p>
 <p>Ok, next up is breakable blocks! First up we need a new class for Blocks! Or Bricks if you like. These just need to be similar to the Paddle class fow now, except we need lots of them on the screen.</p>
 <pre><code class="language-java"><span class="hljs-keyword">import</span> com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
@@ -42,7 +42,7 @@ auto;max-width:750px;line-height:1.6;font-size:18px;color:#444;padding:0
 }
 </code></pre>
 <p>This is a bit of a mouthful but we’re just iterating in a grid from half way up the screen upwards and across the screen, placing blocks as we go! I picked 63 as the block width just because it divides into the screen width nicely. Now, you just need to render the list of blocks (like we did with the list of balls) in the render method and we get this:</p>
-<p><img src="http://tann.space/HelloLibgdx/blocks.gif" alt=""></p>
+<p><img src="blocks.gif" alt=""></p>
 <p>A good start, but some things are still missing. Collision! And destroying blocks! So we need balls to collide with both blocks and paddles now. The smartypants amongst you may be thinking we should genericise the collision logic or move the collision logic to a more central place. You’d be right! But I won’t tell anyone if you’re lazy and just copy collidesWith(Paddle paddle) method and make a collidesWith(Block block) method ;)</p>
 <p>The difference is that we need to destroy the block when the ball hits it. Make a lazy public boolean in the Block class and set it, in addition to reversing ySpeed when the ball hits a block.</p>
 <pre><code class="language-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">checkCollision</span><span class="hljs-params">(Block block)</span> </span>{
@@ -69,7 +69,7 @@ auto;max-width:750px;line-height:1.6;font-size:18px;color:#444;padding:0
     }
 }
 </code></pre>
-<p><img src="http://tann.space/HelloLibgdx/final.gif" alt=""></p>
+<p><img src="final.gif" alt=""></p>
 <p>If everything is working you should have something like this! Well done! There is obviously a lot missing from this game but I’m too lazy to explain it all in detail. It’s time you spread your wings and probably google a bunch of stuff!</p>
 <p>Some pointers though:</p>
 <ul>
